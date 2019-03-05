@@ -1,0 +1,21 @@
+rm -f *.o
+rm -f logica_izquierda
+rm -f logica_derecha
+rm -f aritmetica_izquierda
+rm -f aritmetica_derecha
+rm -f alternar_izquierda
+rm -f alternar_derecha
+rm -f acarreo_alternar_izquierda
+rm -f acarreo_alternar_derecha
+
+nasm -f elf salida.asm
+nasm -f elf mostrar.asm
+nasm -f elf mover.asm
+gcc logica_izquierda.c salida.o mover.o mostrar.o -o logica_izquierda
+gcc logica_derecha.c salida.o mover.o mostrar.o -o logica_derecha
+gcc aritmetica_izquierda.c salida.o mover.o mostrar.o -o aritmetica_izquierda
+gcc aritmetica_derecha.c salida.o mover.o mostrar.o -o aritmetica_derecha
+gcc alternar_izquierda.c salida.o mover.o mostrar.o -o alternar_izquierda
+gcc alternar_derecha.c salida.o mover.o mostrar.o -o alternar_derecha
+gcc acarreo_alternar_izquierda.c salida.o mover.o mostrar.o -o acarreo_alternar_izquierda
+gcc acarreo_alternar_derecha.c salida.o mover.o mostrar.o -o acarreo_alternar_derecha

@@ -1,0 +1,4 @@
+nasm -f elf primo.asm
+nasm -f elf entrada.asm
+nasm -f elf salida.asm
+gcc codigo_primo.c primo.o entrada.o salida.o -o codigo_primo

@@ -1,0 +1,19 @@
+rm -f gcd.o
+rm -f gcdmem.o
+rm -f gcdargs.o
+rm -f mainline
+rm -f mainlinemem
+rm -f mainlineargs
+rm -f *.lst
+
+nasm -f elf gcdmem.asm -l gcdmem.lst
+gcc mainlinemem.c gcdmem.o -o mainlinemem
+
+nasm -f elf gcdlocal.asm -l gcdlocal.lst
+gcc mainlinelocal.c gcdlocal.o -o mainlinelocal
+
+nasm -f elf gcdargs.asm
+gcc mainlineargs.c gcdargs.o -o mainlineargs
+
+nasm -f elf gcd.asm 
+gcc mainline.c gcd.o -o mainline

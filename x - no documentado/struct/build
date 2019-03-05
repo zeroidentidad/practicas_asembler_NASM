@@ -1,0 +1,14 @@
+rm -f *.o
+rm -f c1
+rm -f c2
+rm -f c3
+rm -f c4
+
+nasm -f elf a1.asm
+nasm -f elf a2.asm
+nasm -f elf a3.asm
+nasm -f elf a4.asm
+gcc c1.c a1.o -o c1
+gcc c2.c a2.o -o c2
+gcc c3.c a3.o -o c3
+gcc c4.c a4.o -o c4

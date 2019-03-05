@@ -1,0 +1,5 @@
+nasm -f elf asc.asm -l asc.lst
+nasm -f elf asc2.asm -l asc2.lst
+nasm -f elf asc3.asm -l asc3.lst
+nasm -f elf out.asm
+gcc mainline.c asc2.o out.o -o mainline

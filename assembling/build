@@ -1,0 +1,4 @@
+rm -f sum.o
+rm -f mainline
+nasm -f elf sum.asm 
+gcc mainline.c sum.o -o mainline

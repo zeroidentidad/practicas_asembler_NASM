@@ -1,0 +1,2 @@
+
+nasm -f elf predefs.asm  -l predefs.list

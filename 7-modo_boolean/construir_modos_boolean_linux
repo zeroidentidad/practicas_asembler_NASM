@@ -1,0 +1,15 @@
+rm -f *.o
+rm -f and
+rm -f or
+rm -f xor
+rm -f not
+rm -f test
+
+nasm -f elf salida.asm
+nasm -f elf mostrar.asm
+nasm -f elf modos_boolean.asm
+gcc and.c salida.o modos_boolean.o mostrar.o -o and
+gcc or.c salida.o modos_boolean.o mostrar.o -o or
+gcc xor.c salida.o modos_boolean.o mostrar.o -o xor
+gcc not.c salida.o modos_boolean.o mostrar.o -o not
+gcc test.c salida.o modos_boolean.o mostrar.o -o test

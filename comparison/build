@@ -1,0 +1,4 @@
+rm -f sum.o
+rm -f mainline
+nasm -f elf minmax.asm 
+gcc mainline.c minmax.o -o mainline

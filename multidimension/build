@@ -1,0 +1,6 @@
+rm -f *.o
+rm -f mainline
+
+nasm -f elf twodim.asm
+
+gcc mainline.c twodim.o -o mainline

@@ -1,0 +1,4 @@
+nasm -f elf retrieve.asm
+nasm -f elf in.asm
+nasm -f elf out.asm
+gcc mainline.c retrieve.o in.o out.o -o mainline

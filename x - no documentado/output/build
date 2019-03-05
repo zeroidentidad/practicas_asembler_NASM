@@ -1,0 +1,3 @@
+nasm -f elf show.asm
+nasm -f elf out.asm
+gcc mainline.c show.o out.o -o mainline

@@ -1,0 +1,8 @@
+rm -f *.o
+rm -f codigo_por_cuatro
+rm -f codigo_ordenar
+
+nasm -f elf por_cuatro.asm
+nasm -f elf ordenar.asm
+gcc codigo_por_cuatro.c por_cuatro.o -o codigo_por_cuatro
+gcc codigo_ordenar.c ordenar.o -o codigo_ordenar

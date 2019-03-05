@@ -1,0 +1,5 @@
+rm -f cuadratica.o
+rm -f codigo_cuadratica
+
+nasm -f elf cuadratica.asm
+gcc codigo_cuadratica.c cuadratica.o -o codigo_cuadratica

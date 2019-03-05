@@ -1,0 +1,19 @@
+     1                                         org 100h
+     2 00000000 66A1[2400]                     mov  eax,[x]
+     3 00000004 668B1E[2800]                   mov  ebx,[y]
+     4                                  looptop:
+     5 00000009 6683F800                       cmp  eax,0              ; if (x == 0) we're done
+     6 0000000D 7411                           je   goback
+     7 0000000F 6639D8                         cmp  eax,ebx            ; make certain x is the larger number
+     8 00000012 7D02                           jge  modulo
+     9 00000014 6693                           xchg eax,ebx            ; swap x and y
+    10                                  modulo:
+    11 00000016 6699                           cdq                    ; set up for division
+    12 00000018 66F7FB                         idiv ebx               ; divide edxeax by eb
+    13 0000001B 6689D0                         mov  eax,edx           ; the remainder is in edx
+    14 0000001E EBE9                           jmp  looptop
+    15                                  goback:
+    16 00000020 B44C                           mov ah,4Ch
+    17 00000022 CD21                           int 21h
+    18 00000024 87260000                x:     dd   9863
+    19 00000028 38A10000                y:     dd   41272

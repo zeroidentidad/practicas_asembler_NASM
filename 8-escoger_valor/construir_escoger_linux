@@ -1,0 +1,7 @@
+rm -f *.o
+rm -f codigo_escoger
+
+nasm -f elf salida.asm
+nasm -f elf entrada.asm
+nasm -f elf escoger.asm
+gcc codigo_escoger.c salida.o entrada.o escoger.o -o codigo_escoger

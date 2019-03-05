@@ -1,0 +1,16 @@
+     1                                  segment .data
+     2 00000000 02                            db   __NASM_MAJOR__
+     3 00000001 05                            db   __NASM_MINOR__
+     4 00000002 01                            db   __NASM_SUBMINOR__
+     5 00000003 00                            db   __NASM_PATCHLEVEL__
+     6 00000004 00010502                      dd   __NASM_VERSION_ID__
+     7 00000008 322E30352E3031                db   __NASM_VER__
+     8 0000000F 707265646566732E61-           db   __FILE__
+     9 00000018 736D               
+    10 0000001A 0900                          dw   __LINE__
+    11                                  segment .bss
+    12                                  segment .text
+    13                                  
+    14                                      global try
+    15                                  try:
+    16 00000000 C3                          ret
